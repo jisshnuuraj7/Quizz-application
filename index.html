@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <h1>🎯 Smart Quiz Game</h1>
+
+  <!-- Name Screen -->
+<div id="name-screen">
+  <h2>Enter Your Name</h2>
+  <input type="text" id="username" placeholder="Your Name" />
+  <br><br>
+  <button onclick="saveName()">Start</button>
+</div>
+
+<!-- Category Screen -->
+<div id="category-screen" class="hide">
+  <h2>Welcome, <span id="playerName"></span>!</h2>
+  <h3>Select Category</h3>
+  <button onclick="startQuiz('science')">🔬 Science</button>
+  <button onclick="startQuiz('math')">📐 Math</button>
+  <button onclick="startQuiz('computer')">💻 Computer</button>
+</div>
+  
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="hide">
+    <div class="top-bar">
+      <span>⏱ Time: <span id="timer">15</span></span>
+      <span id="qno"></span>
+    </div>
+
+    <h2 id="question"></h2>
+    <div id="options"></div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="hide">
+    <h2>🎉 Quiz Completed!</h2>
+    <h1 id="score"></h1>
+    <p>Great job! Want to try again?</p>
+    <button onclick="location.reload()">Play Again</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
